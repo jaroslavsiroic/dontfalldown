@@ -340,22 +340,22 @@ def launch_level(level=levels[0]):
                 raise SystemExit("ESCAPE")
             if e.type == KEYDOWN and e.key == K_SPACE:
                 event_pause()
-            if e.type == KEYDOWN and e.key == K_UP:
+            if e.type == KEYDOWN and (e.key == K_UP or e.key == K_w):
                 up = True
-            if e.type == KEYDOWN and e.key == K_DOWN:
+            if e.type == KEYDOWN and (e.key == K_DOWN or e.key == K_s):
                 down = True
-            if e.type == KEYDOWN and e.key == K_LEFT:
+            if e.type == KEYDOWN and (e.key == K_LEFT or e.key == K_a):
                 left = True
-            if e.type == KEYDOWN and e.key == K_RIGHT:
+            if e.type == KEYDOWN and (e.key == K_RIGHT or e.key == K_d):
                 right = True
 
-            if e.type == KEYUP and e.key == K_UP:
+            if e.type == KEYUP and (e.key == K_UP or e.key == K_w):
                 up = False
-            if e.type == KEYUP and e.key == K_DOWN:
+            if e.type == KEYUP and (e.key == K_DOWN or e.key == K_s):
                 down = False
-            if e.type == KEYUP and e.key == K_RIGHT:
+            if e.type == KEYUP and (e.key == K_RIGHT or e.key == K_d):
                 right = False
-            if e.type == KEYUP and e.key == K_LEFT:
+            if e.type == KEYUP and (e.key == K_LEFT or e.key == K_a):
                 left = False
 
         for y in range(48):
